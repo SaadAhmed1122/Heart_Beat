@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stress Level Detector"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="293dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginRight="56dp"
+            android:text="@string/desc"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animationView"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="287dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="64dp"
+            android:textColor="#D84315"
+            android:textAlignment="center"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="60dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"
+            android:text="Place your finger to sensor to check the Stress Level."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_edittext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:boxBackgroundColor="@color/teal_200"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/username"
+                android:focusedByDefault="false"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="Enter Name"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/valuex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="68"
+            android:textColor="#D84315"
+            android:textSize="55dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            android:gravity="center_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/getdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:text="Get Data" />
+
+            <Button
+                android:id="@+id/savebtn"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"
+                android:text="Sava Data"
+                android:textSize="15dp" />
+            <Button
+                android:id="@+id/showrecord"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="100dp"
+                android:onClick="showrec"
+
+                android:layout_height="wrap_content"
+                android:text="Show Record"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
